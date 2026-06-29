@@ -11,6 +11,14 @@
 
 두 프로젝트 모두 실제로 동작하는 자동화 워크플로우를 구현하였으며, Trigger 1개 이상, Action 2개 이상, 조건 분기 1개 이상을 포함하도록 구성하였다.
 
+### 제출 자료 구성
+
+- 프로젝트 1 Make: [구현 및 실행 결과 화면](01_project1_make/screenshots/README.md)
+- 프로젝트 1 Activepieces: [구현 및 실행 결과 화면](02_project1_activepieces/screenshots/README.md)
+- 프로젝트 2 Make: [구현 및 실행 결과 화면](03_project2_make/screenshots/README.md)
+
+각 링크에는 전체 워크플로우, Trigger, 조건 분기, Action 설정, 실행 기록, Google Sheets 결과와 Discord 알림 결과가 순서대로 정리되어 있다.
+
 ---
 
 ## 2. 핵심 개념 정리
@@ -139,6 +147,8 @@ Make의 Router와 Filter를 사용하여 다음 조건을 설정하였다.
 
 테스트 결과, `priority` 값이 `긴급`인 데이터는 `긴급처리` 시트에 기록되고 Discord에 긴급 알림이 전송되었다. `priority` 값이 `일반`인 데이터는 `일반처리` 시트에 기록되고 Discord에 일반 알림이 전송되었다.
 
+전체 Scenario 구성과 실행 결과는 [프로젝트 1 Make 스크린샷](01_project1_make/screenshots/README.md)에서 확인할 수 있다.
+
 ---
 
 ## 5. Activepieces 구현
@@ -196,6 +206,8 @@ Activepieces의 Router를 사용하여 다음 조건을 설정하였다.
 ### 5.6 Activepieces 실행 결과
 
 테스트 결과, `priority` 값에 따라 긴급 분기와 일반 분기가 정상적으로 실행되었다. 각 분기는 Google Sheets 처리 시트에 데이터를 기록하고 Discord Webhook을 통해 알림 메시지를 전송하였다.
+
+전체 Flow 구성과 실행 결과는 [프로젝트 1 Activepieces 스크린샷](02_project1_activepieces/screenshots/README.md)에서 확인할 수 있다.
 
 ---
 
@@ -383,6 +395,8 @@ Make의 Router와 Filter를 사용해 다음 두 경로로 분기하였다.
 
 이를 통해 프로젝트 2 역시 Trigger, 조건 분기, Action 2개 이상을 포함한 실제 자동 실행 구조로 구현되었음을 확인하였다.
 
+전체 Scenario 구성과 실행 결과는 [프로젝트 2 Make 스크린샷](03_project2_make/screenshots/README.md)에서 확인할 수 있다.
+
 ---
 
 # 13. 전체 요구사항 충족 여부
@@ -403,8 +417,8 @@ Make의 Router와 Filter를 사용해 다음 두 경로로 분기하였다.
 |---|---|---|
 | 서로 다른 2개 이상의 자동화 도구 사용 | 충족 | Make, Activepieces 사용 |
 | 동일한 워크플로우 구조로 구현 | 충족 | Google Sheets → 조건 분기 → Sheets 기록 → Discord 알림 |
-| 각 도구별 구성 화면 캡처 | 제출 자료에 포함 예정 | Make, Activepieces 화면 캡처 |
-| 실행 결과 화면 캡처 | 제출 자료에 포함 예정 | Sheets 결과, Discord 결과, 실행 로그 캡처 |
+| 각 도구별 구성 화면 캡처 | 충족 | [Make 화면](01_project1_make/screenshots/README.md), [Activepieces 화면](02_project1_activepieces/screenshots/README.md) |
+| 실행 결과 화면 캡처 | 충족 | 실행 로그, Google Sheets 결과와 Discord 알림 결과 포함 |
 | 비교 분석 보고서 작성 | 충족 | 본 보고서에 비교 분석 포함 |
 | 최소 5개 이상 비교 항목 | 충족 | UI/UX, 설정 난이도, 조건 분기, 실행 로그, Webhook, 무료 플랜 등 비교 |
 | 장단점 및 적합한 상황 작성 | 충족 | 7~8장에 작성 |
@@ -417,8 +431,8 @@ Make의 Router와 Filter를 사용해 다음 두 경로로 분기하였다.
 | 도구 1개 선정 및 이유 작성 | 충족 | Make 선정 및 이유 작성 |
 | 자동 실행 구조 구현 | 충족 | Google Sheets 새 행 Trigger 기반 |
 | 워크플로우 흐름 설명 포함 | 충족 | 다이어그램 및 단계별 설명 포함 |
-| 구현 화면 캡처 | 제출 자료에 포함 예정 | Make Scenario 화면 캡처 |
-| 실행 결과 화면 캡처 | 제출 자료에 포함 예정 | Sheets 로그, Discord 알림 캡처 |
+| 구현 화면 캡처 | 충족 | [Make Scenario 구성 화면](03_project2_make/screenshots/README.md) 포함 |
+| 실행 결과 화면 캡처 | 충족 | 실행 로그, Google Sheets 결과와 Discord 알림 결과 포함 |
 
 ---
 
